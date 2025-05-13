@@ -1,0 +1,253 @@
+/*
+    font-family: "Roboto Mono", monospace;
+    font-family: "Inconsolata", monospace;
+    font-family: "Source Code Pro", monospace;*/
+
+ /*   NORMALIZACION:*/
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*esto mantiene el ancho y alto a pesar del padding y border*/
+    font-family: 'Inconsolata', monospace;
+    list-style: none; /*quita decoracion de la lista*/
+    text-decoration: none; /*quita subrayado del enlace*/
+    color: white;
+ }
+
+body {
+    background-color: black; /*borrar cuando tenga el fondo final*/
+}
+header{
+    position: fixed;/*esto hace que el header se quede fijo en la parte superior*/
+    right: 0;
+    top: 0;
+    z-index: 100; /*esto hace que el header se muestre por encima*/
+    width: 100%;
+    display: flex;/*esto hara que los elementos se pongan en linea*/
+    align-items: center; /* centra verticalmente ya que el main axis esta horizontal por defecto utilizamos un display flex row*/
+    justify-content: space-between; /* separa los elementos*/
+    padding: 15px 3%;
+    background-color: transparent;
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: 700; /*grueso de las letras*/
+}
+
+.navlist{
+    display: flex;/* esto sirve para que los elementos de la lista ul se pongan en linea*/
+}
+.navlist a{
+    margin-left: 60px; /*esto es para separar las palabras*/
+    font-size: 15px;
+    font-weight: 550;
+    border-bottom: 2px solid transparent; /*subrayado transparente*/
+    transition: all .5s ease; /*esto es para animar todas las caracteristicas del navlist*/
+}
+.navlist a:hover{
+    border-bottom: 2px solid white; /*este es un subrayado blanco que aparecera cuando hacemos hover*/
+
+}
+#menu-icon{
+    display: none; /*para que solo se vea cuando la pagina este colapsada*/
+}
+#menu-icon{
+    color: white;
+    font-size: 30px;
+    z-index: 101; /*para que este sobre el header*/
+    cursor: pointer;
+}
+#menu-toggle{
+    display: none; /*no queremos que se vea nunca el checkbox*/
+}
+.menu-icon-action{
+    display: none; /*para q no se le pueda hacer click*/
+}
+.hero{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(245.59deg, #e694b1 0, #8a5a6e 25%,#aa3f6b 75% );
+    position: relative; /*para que sea relativo al contenedor (nos permite usar top bottom left y right)*/
+    display: grid;/*para que el hero se pueda dividir en dos columnas */
+    grid-template-columns: 1fr 1fr; 
+    align-items: center;/*para alinear verticalmente el hero*/
+    gap: 2rem;/*para que tengamos espacio de 2 rem entre las dos columnas*/
+}
+section{
+    padding: 0 8%;
+}
+.hero-text h5 {
+font-size: 14px;
+font-weight: 400;
+margin-bottom: 25px;
+}
+.hero-text h1{
+    font-family: "Source Code Pro", monospace;
+    font-size: 50px;
+    line-height: 1;
+    margin: 0 0 30px;
+}
+.hero-text h4{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.hero-text p{
+    font-size: 80%;
+    margin-bottom: 40px;
+    line-height: 1.9;
+}
+.hero-img img{
+    border-radius: 5cm;
+    width: 400px;
+    margin: 10% 0 0 10%;
+    transition: all 6s linear;/*esto hace q sea lineal la tarns*/
+}
+.hero-img img:hover{ 
+    width: 470px;
+    opacity: 0.6;
+}
+.hero-text a{
+    display: inline-block;
+    background-color: #a17a8a;
+    border: 1px solid transparent;
+    padding: 15px 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .5s ease;
+}
+.hero-text a:hover{
+    background-color: transparent;
+    border: 1px solid white;
+    transform: translateX(8px);
+}
+.hero-text a.videos{
+    background-color: transparent;
+    border: 1px solid white;
+    margin-left: 20px;
+}
+.hero-text a.videos i{
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.icons{
+    position: absolute;
+    top: 50vh;
+    padding: 0 3%;
+    transform: translateY(-50%);
+}
+.icons i{
+    display: block;
+    margin: 26px 0;
+    font-size: 25px;
+    transition: all .5s;
+}
+.icons i:hover{
+    color: #9c9999;
+    transform: translateY(-5px);
+}
+.scroll-down{
+    position: absolute;
+    bottom: 6%;
+    right: 3%;
+}
+.scroll-down i{
+    display: block;
+    padding: 12px;
+    background-color: #62243e;
+    font-size: 40px;
+    border-radius: 35px;
+    transition: all .5s ease;
+}
+.scroll-down i:hover{
+    transform: translateY(-5px);
+}
+/*para que la web sea responsive*/
+@media (max-width:992px){
+
+    section {
+        padding: 0 3%;
+        transition: .2s;
+    }
+
+    .hero-text{
+        padding-top: 0;
+    }
+
+    .hero-img{
+        text-align: center;
+    }
+
+    .hero-img img{
+        width: 80%;
+        margin: 10% 0 0 10%;
+    }
+
+    .hero-text p{
+        font-size: 70%;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    .scroll-down {
+        display: none;
+    }
+
+} 
+
+@media (max-width:768px){
+    
+    .menu-icon-action{
+        display: block;
+    }
+
+    #menu-icon{
+        display: block;
+    }
+
+    .hero-text{
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .hero-img img{
+        margin: 0;
+    }
+
+    .hero {
+        display: grid;
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .navlist {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 200px;
+        height: 180px;
+        background-color: #3c0a1fd0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+        transition: all .5s ease;
+    }
+
+    .navlist a{
+        display: block;
+        margin: 7px 0;
+    }
+
+    #menu-toggle:checked + label.menu-icon-action + ul{
+        right: 0;
+    }
+}
