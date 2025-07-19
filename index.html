@@ -1,73 +1,65 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thalassaok web</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thalassa Web</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Boxicons -->
-  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-
-  <!-- Remixicon -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Roboto+Mono:wght@100..700&family=Source+Code+Pro:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet" />
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <a href="#" class="logo">THALASSA</a>
+    <header>
+        <a href="#" class="logo">THALASSA</a>
 
-    <input type="checkbox" id="menu-toggle" />
-    <label for="menu-toggle" class="menu-icon-action">
-      <div class='bx bx-menu' id="menu-icon"></div>
-    </label>
+        <!-- Ícono hamburguesa -->
+        <div class='bx bx-menu' id="menu-icon"></div>
 
-    <ul class="navlist">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">Acerca de mí</a></li>
-      <li><a href="#">Contacto</a></li>
-    </ul>
-  </header>
+        <ul class="navlist">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre mí</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-text">
-      <h5>Frontend Developer</h5>
-      <h4>Tech Lead</h4>
-      <h1>Thalassa</h1>
-      <p>
-        Dominá las tecnologías clave del desarrollo web y preparate <br>
-        para conseguir tu primer trabajo al finalizar el curso.
-      </p>
-      <a href="#">CV</a>
-      <a href="#" class="videos"><i class="ri-play-fill"></i> Mira mis videos</a>
+    <section class="hero">
+        <div class="hero-text">
+            <h5>Frontend Developer</h5>
+            <h4>ReactJS Tech Lead</h4>
+            <h1>Thalassa</h1>
+            <p>Aprendé todas las tecnologías conmigo </p>
+            <a href="#">CV</a>
+            <a href="#" class="videos"><i class="ri-play-fill"></i>Mirá mis videos</a>
+        </div>
+
+        <div class="hero-img">
+            <img src="/assets/imgs/Thalassa.jpeg" alt="thalassa foto" />
+        </div>
+    </section>
+
+    <div class="icons">
+        <a href="#"><i class="ri-instagram-line"></i></a>
+        <a href="#"><i class="ri-youtube-line"></i></a>
+        <a href="#"><i class="ri-github-fill"></i></a>
     </div>
 
-    <div class="hero-img">
-      <img src="assets/imgs/Thalassa.jpeg" alt="imagen thalassa" />
+    <div class="scroll-down">
+        <a href="#"><i class="ri-arrow-down-s-fill"></i></a>
     </div>
-  </section>
 
-  <!-- ICONOS SOCIALES -->
-  <div class="icons">
-    <a href="#"><i class="ri-instagram-line"></i></a>
-    <a href="#"><i class="ri-whatsapp-line"></i></a>
-    <a href="#"><i class="ri-youtube-line"></i></a>
-  </div>
+    <script src="https://unpkg.com/scrollreveal"></script>
 
-  <!-- FLECHA ABAJO -->
-  <div class="scroll-down">
-    <a href="#"><i class="ri-arrow-drop-down-fill"></i></a>
-  </div>
-
+    <script src="script.js"></script>
 </body>
+
 </html>
